@@ -15,11 +15,11 @@ on Tuesday 17 November 2026, each checked against dated news reports:
   quarter (company); DRC Ebola passes 11,000 cases (WHO); NSA Net outage
   (DNI: patching, not a cyberattack); Quad meets in Manila.
   Briefs cover the Gulf, Lebanon, Gaza, markets, chips, Australia, Japan,
-  China, India, Thailand, ASEAN, Dubai, COP31, Pakistan, US weather,
-  tech, courts, sport and culture. Items first reported on other days
-  (EU-Rwanda hub, Zaporizhzhia toll, U19 Asia Cup final, Rio Tinto
-  Panguna, Gaza joint statement, Depardieu, COP31 draft) were checked
-  and excluded.
+  Europe, India, Thailand, ASEAN, Dubai, COP31, Pakistan, US weather,
+  tech, courts, sport, culture, South America and science. Items first
+  reported on other days (EU-Rwanda hub, Zaporizhzhia toll, U19 Asia Cup
+  final, Rio Tinto Panguna, Gaza joint statement, Depardieu, COP31 draft,
+  China copper smelting) were checked and excluded.
 
 Deterministic: fixed geometry, fixed fonts, fixed palette, no clock, no
 randomness, no network. Re-running produces byte-identical output.
@@ -282,8 +282,8 @@ CONTINENTS = [
 MAP_PINS = [(1, 56, 27), (2, 34, 45), (3, 139, 36), (4, -100, 40),
             (5, -122, 37), (6, 23, -3), (7, -77, 39), (8, 121, 15)]
 
-MAP_LABELS = [("N AMERICA", -108, 60), ("S AMERICA", -62, -14), ("EUROPE", 8, 55),
-              ("AFRICA", 14, 10), ("ASIA", 82, 52), ("OCEANIA", 128, -27)]
+MAP_LABELS = [("N AMERICA", -108, 60), ("S AMERICA", -55, -18), ("EUROPE", 8, 55),
+              ("AFRICA", 10, 22), ("ASIA", 82, 52), ("OCEANIA", 128, -27)]
 
 
 def draw_map(d, x, y, w, h):
@@ -361,14 +361,14 @@ def side_card(d, x, y, w, h, num, tag, tagfill, head, sub, art, art_w,
 
 BRIEFS = [
     "Trump takes 'dirty bomb' plot report seriously; Iran denies it. (CNN)",
-    "Houthis say drones hit Saudi pipeline pumping stations.",
+    "Houthis say 5 drones fired at Saudi pipeline stations.",
     "Strikes and shelling reported across south Lebanon.",
     "UN: winter rains flood Gaza shelters, deepen food crisis.",
-    "Wall Street falls on AI slide; Brent crude near $91.80.",
+    "Wall Street falls on AI slide; Brent crude tops $93.",
     "US requires chip export licences for five nations. (WSJ)",
     "RBA minutes: most see 4.85% rate 'not clearly sufficient'.",
     "Kuroda: BOJ rates may top neutral; Japan delays new bond.",
-    "China copper smelting capacity nears ceiling, group says.",
+    "Germany backs Spain's de Cos for ECB top job.",
     "US presses FCC ban on Chinese transceivers. (Reuters)",
     "Amazon pledges $7bn for Indian renewables by 2030.",
     "Thailand, US hail progress on reciprocal trade deal.",
@@ -377,13 +377,13 @@ BRIEFS = [
     "COP31: Brazil, France launch 25-nation ocean taskforce.",
     "25 nations back Wildlife for Climate pledge at COP31.",
     "BASIC bloc presses rich nations on pre-2050 net zero.",
-    "African activists protest at COP31 over energy funding.",
+    "Pope Leo XIV ends 12-day South America tour, lands in Rome.",
     "Pakistan cuts petrol and diesel by Rs2 a litre.",
-    "Florida floods; western storm batters the US.",
+    "Flash flooding hits Florida; storm front reaches the West.",
     "Waymo pulls robotaxis from freeways.",
     "Irish activist charged in NY over $60m plane damage.",
-    "Illinois ethanol worker indicted over alleged bomb plot.",
-    "Tiger Woods returns to golf.",
+    "NASA ends NICER X-ray telescope science, motor blamed.",
+    "Tiger Woods confirms return at Hero World Challenge. (AP)",
     "National Geographic's Pictures of the Year published.",
     "Trump open to one-on-one meeting with Putin this week.",
 ]
@@ -407,12 +407,12 @@ def main():
     feature(d, 20, 132, 640, 196, 1, "MIDDLE EAST \u2014 THE GULF", NAVY,
             "U.S. STRIKES QESHM ISLAND",
             "U.S. warplanes hit an Iranian missile launch site after attacks on "
-            "Hormuz shipping, a U.S. official tells Reuters. A fourth tanker is hit "
-            "in 24 hours; Oman evacuates a burning gas tanker's crew (UKMTO).",
+            "Hormuz shipping, a U.S. official tells Reuters. "
+            "Oman evacuates a burning gas tanker's crew (UKMTO).",
             art_qeshm, 76, head_size=28, sub_size=15)
     side_card(d, 672, 132, 332, 93, 2, "UKRAINE", (70, 90, 140),
               "CRIMEA BRIDGE SPAN FALLS",
-              "227 m road arch drops into the strait; road shut, rail resumes.",
+              "Road arch drops into the strait; road shut, rail resumes.",
               art_bridge, 100, head_size=15, sub_size=12)
     side_card(d, 672, 235, 332, 93, 3, "EAST ASIA", (160, 60, 60),
               "JAPAN SCRAMBLES FIGHTER JETS",
@@ -483,7 +483,7 @@ def main():
     f_foot = font(SANS, 12)
     centre(d, 994,
            "Sources: Reuters, AP, AFP, Bloomberg, WSJ, PAHO, WHO, UN News, UKMTO, "
-           "Le Monde, IANS, RBA, Nvidia.",
+           "Le Monde, IANS, RBA, Nvidia, NASA, Vatican News.",
            f_foot, GREY)
     centre(d, 1008,
            "Original artwork \u2014 no photographs. All 34 stories happened or were "
